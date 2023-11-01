@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import {MoviesContext} from "../../contexts/moviesContext";
 
-export default function MovieCard({actor}) {
+export default function ActorCard({actor}) {
 
   return (
     <Card sx={{ maxWidth: 345 }}>

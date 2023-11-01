@@ -11,19 +11,17 @@ import ActorList from "../actorList";
 import { getTVCredits } from "../../api/tmdb-api";
 
 const TemplateTVPage = ({ movie, children }) => {
-  const { data , error, isLoading, isError } = useQuery(
-    ["images", { id: movie.id }],
-    getTVImages,
-
-  );
 
   const data2 = useQuery(
     ["cast", { id: movie.id }],
     getTVCredits,
   );
 
+  const { data , error, isLoading, isError } = useQuery(
+    ["images", { id: movie.id }],
+    getTVImages,
 
-  
+  );
 
   if (isLoading) {
     return <Spinner />;
@@ -33,27 +31,15 @@ const TemplateTVPage = ({ movie, children }) => {
     return <h1>{error.message}</h1>;
   }
 
-
-
-
-
-
-
-
   const images = data.backdrops;
   
-  const castCrew = data2.data.cast;
-  console.log(castCrew);
-
-
-
-
-
-
+  const actors = data2.data.cast;
+  console.log(actors);
 
   return (
     <>
       <TVHeader movie={movie} />
+
 
       <Grid container spacing={5} sx={{ padding: "15px" }}>
         <Grid item xs={3}>
@@ -75,11 +61,24 @@ const TemplateTVPage = ({ movie, children }) => {
             </ImageList>
           </div>
         </Grid>
-        {/*<ActorList actors></ActorList>*/}
         <Grid item xs={9}>
           {children}
         </Grid>
       </Grid>
+
+      <Grid container spacing={5} sx={{ padding: "15px" }}>
+        <Grid item xs={3}>
+          <div sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-around",
+          }}>
+            <ActorList actors={actors}></ActorList>
+            </div>
+            </Grid>
+      </Grid>
+
+
     </>
   );
 };
