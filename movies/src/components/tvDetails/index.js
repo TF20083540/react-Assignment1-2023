@@ -41,6 +41,7 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         <li>
           <Chip label="Genres" sx={{...chip}} color="primary" />
         </li>
+        
         {movie.genres.map((g) => (
           <li key={g.name}>
             <Chip label={g.name} sx={{...chip}} />
@@ -48,19 +49,19 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         ))}
       </Paper>
       <Paper component="ul" sx={{...root}}>
-        <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} />
-
+        <Chip icon={<AccessTimeIcon />} label={`${movie.number_of_seasons} seasons.`} />
+        <Chip icon={<AccessTimeIcon />} label={`${movie.number_of_episodes} episodes.`} />
         <Chip
           icon={<StarRate />}
           label={`${movie.vote_average} (${movie.vote_count}`}
         />
-        <Chip label={`Released: ${movie.release_date}`} />
+        <Chip label={`First Premiered: ${movie.first_air_date}`} />
       </Paper>
 
           {/*Countries Exercise (Week 4) */}    
       <Paper component="ul" sx={{...root}}>
-      <Chip label={`Production Countries`} color='primary'/>
-        {movie.production_countries.map((g) => (
+      <Chip label={`Production Companies`} color='primary'/>
+        {movie.production_companies.map((g) => (
           <li key={g.name}>
             <Chip label={g.name} sx={{...chip}} />
           </li>

@@ -16,55 +16,22 @@ import { Link } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import {MoviesContext} from "../../contexts/moviesContext";
 
-export default function MovieCard({movie, action}) {
-  const { favorites, addToFavorites } = useContext(MoviesContext);
-  const { mustWatches, addToMustWatches} = useContext(MoviesContext);
-
-  if (favorites.find((id) => id === movie.id)) {
-    movie.favorite = true;
-  } else {
-    movie.favorite = false
-  }
-
-  /*Test Code
-  if (mustWatches.find((id) => id === movie.id)) {
-    movie.mustWatch = true;
-  } else {
-    movie.mustWatch = false
-  }
-  */
- 
-  const handleAddToFavorite = (e) => {
-    e.preventDefault();
-    addToFavorites(movie);
-  };
-
-  const handleAddToMustWatches = (e) => {
-    e.preventDefault();
-    addToMustWatches(movie);
-  };
+export default function MovieCard({actor}) {
 
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
-        avatar={
-          movie.favorite ? (
-            <Avatar sx={{ backgroundColor: 'red' }}>
-              <FavoriteIcon />
-            </Avatar>
-          ) : null
-        }
         title={
           <Typography variant="h5" component="p">
-            {movie.name}{" "}
+            {actor.name}{" "}
           </Typography>
         }
       />
       <CardMedia
         sx={{ height: 500 }}
         image={
-          movie.poster_path
-            ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+          actor.profile_path
+            ? `https://image.tmdb.org/t/p/w500/${actor.profile_path}`
             : img
         }
       />
@@ -73,25 +40,18 @@ export default function MovieCard({movie, action}) {
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
               <CalendarIcon fontSize="small" />
-              {movie.first_air_date}
+              {actor.character}
             </Typography>
           </Grid>
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
               <StarRateIcon fontSize="small" />
-              {"  "} {movie.vote_average}{" "}
+              {"  "} {actor.popularity}{" "}
             </Typography>
           </Grid>
         </Grid>
       </CardContent>
-      <CardActions disableSpacing>
-        {action(movie)}
-        <Link to={`/tv/${movie.id}`}>
-          <Button variant="outlined" size="medium" color="primary">
-            More Info ...
-          </Button>
-        </Link>
-      </CardActions>
+
     </Card>
   );
 }
