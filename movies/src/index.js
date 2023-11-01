@@ -17,8 +17,6 @@ import TopRatedMoviesPage from "./pages/highestAllTimeMoviesPage";
 import DiscoverTVPage from "./pages/tvDiscoverPage";
 import TVPage from "./pages/tvDetailsPage";
 
-
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -32,8 +30,6 @@ const queryClient = new QueryClient({
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-
-
       <BrowserRouter>
       <SiteHeader />
       <MoviesContextProvider>
@@ -52,13 +48,7 @@ const App = () => {
           <Route path="/tv/:id" element={<TVPage />} />
      
         </Routes>
-        </MoviesContextProvider>
-
-
-
-
-
-
+      </MoviesContextProvider>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

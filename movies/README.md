@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Assignment 1 - ReactJS app.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Name: [your name]
 
-## Available Scripts
+## Overview.
 
-In the project directory, you can run:
+The app has been expanded from simply being a movie-display app to also being used to display TV shows. It also shows actors related to each aswell through a standardised actorCard. 
 
-### `npm start`
+### Features. 
++ react-query enabled on all current pages.
++ PersonIcon used on Actor Cards.
++ [Current Task] Watch Later list, similar to favourites list.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup requirements.
 
-### `npm test`
+1) Extract full package from .zip file.
+2) Open root folder with VSCode.
+3) cd into the movies folder.
+4) Run the program with "npm start".
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## API endpoints.
 
-### `npm run build`
++ Popular Movies Page - movies/popular
++ Top Rated Movies Page - movies/top_rated
++ DiscoverTVPage - discover/tv
++ TV Details Page - tv/${id}
++ TV Show Images - tv/${id}/images
++ TV Show Credits - tv/${id}/credits
++ Movie Credits - movie/${id}/credits
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ 
+## Routing.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
++ /movies/popular - displays currently popular movies.
++ /movies/top_rated - displays all time highest rated movies.
++ /tv/discover - find tv shows.
++ /tv/:id - displays a selected TV Show's details.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[If relevant, state what aspects of your app are protected (i.e. require authentication) and what is public.]
 
-### `npm run eject`
+## Independent learning (If relevant).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Itemize the technologies/techniques you researched independently and adopted in your project, 
+i.e. aspects not covered in the lectures/labs. Include the source code filenames that illustrate these 
+(we do not require code excerpts) and provide references to the online resources that helped you (articles/blogs).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Resources:
+MaterialUI Icons: https://mui.com/material-ui/material-icons/
