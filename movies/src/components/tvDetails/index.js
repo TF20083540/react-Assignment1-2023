@@ -11,7 +11,6 @@ import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews";
 
 //Test
-
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 import ActorList from "../actorList";
@@ -98,7 +97,7 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         {/*End Countries Exercise (Week 4) */}
 
         <Typography variant="h5" component="h3">
-          Actors
+          Cast
         </Typography>
 
         

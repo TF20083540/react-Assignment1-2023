@@ -10,6 +10,13 @@ import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews";
 
+//Test
+import { useQuery } from "react-query";
+import Spinner from '../spinner'
+import ActorList from "../actorList";
+import { getMovieCredits } from "../../api/tmdb-api";
+import Grid from "@mui/material/Grid";
+
 
 const root = {
     display: "flex",
@@ -23,6 +30,22 @@ const chip = { margin: 0.5 };
 
 const MovieDetails = ({ movie }) => {  // Don't miss this!
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const {data, error, isLoading, isError } = useQuery(
+    ["cast", { id: movie.id }],
+    getMovieCredits,
+  );
+  
+  if (isLoading) {
+    return <Spinner />;
+  }
+
+  if (isError) {
+    return <h1>{error.message}</h1>;
+  }
+
+  const actors = data.cast;
+  console.log(actors);
 
   return (
     <>
@@ -70,6 +93,17 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         ))}
         </Paper>
         {/*End Countries Exercise (Week 4) */}
+
+        <Typography variant="h5" component="h3">
+          Cast
+        </Typography>
+
+        
+        <Grid container spacing={0} sx={{ padding: "50px" }}>
+        <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', flexWrap: "wrap",}}>
+          <ActorList actors={actors}></ActorList>
+        </div>
+        </Grid>
       
         <Fab
         color="secondary"
