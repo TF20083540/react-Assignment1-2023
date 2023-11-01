@@ -7,7 +7,7 @@ const ActorList = ( {actors}) => {
   console.log(actors);
   let actorCards = actors.map((m) => (
     <Grid key={m.id} item xs={12} sm={6} md={4} lg={3} xl={2}>
-      <Actor key={m.id} actor={m}/>
+        <Actor key={m.id} actor={m}/>
     </Grid>
   ));
   return actorCards;

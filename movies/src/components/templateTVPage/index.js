@@ -7,15 +7,7 @@ import { getTVImages } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 
-import ActorList from "../actorList";
-import { getTVCredits } from "../../api/tmdb-api";
-
 const TemplateTVPage = ({ movie, children }) => {
-
-  const data2 = useQuery(
-    ["cast", { id: movie.id }],
-    getTVCredits,
-  );
 
   const { data , error, isLoading, isError } = useQuery(
     ["images", { id: movie.id }],
@@ -33,13 +25,9 @@ const TemplateTVPage = ({ movie, children }) => {
 
   const images = data.backdrops;
   
-  const actors = data2.data.cast;
-  console.log(actors);
-
   return (
     <>
       <TVHeader movie={movie} />
-
 
       <Grid container spacing={5} sx={{ padding: "15px" }}>
         <Grid item xs={3}>
@@ -65,20 +53,6 @@ const TemplateTVPage = ({ movie, children }) => {
           {children}
         </Grid>
       </Grid>
-
-      <Grid container spacing={5} sx={{ padding: "15px" }}>
-        <Grid item xs={3}>
-          <div sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-around",
-          }}>
-            <ActorList actors={actors}></ActorList>
-            </div>
-            </Grid>
-      </Grid>
-
-
     </>
   );
 };
