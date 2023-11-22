@@ -4,12 +4,16 @@ import FilterCard from "../filterMoviesCard";
 import TVList from "../tvList";
 import Grid from "@mui/material/Grid";
 
-function TVListPageTemplate({ movies, title, action }) {
+function TVListPageTemplate({ movies: TVShows, title, action }) {
   const [nameFilter, setNameFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("0");
   const genreId = Number(genreFilter);
 
-  let displayedMovies = movies
+  console.log("templateTVListPage");
+  console.log(TVShows);
+
+
+  let displayedTVShows = TVShows
     .filter((m) => {
       return m.name.toLowerCase().search(nameFilter.toLowerCase()) !== -1;
     })
@@ -35,7 +39,7 @@ function TVListPageTemplate({ movies, title, action }) {
             genreFilter={genreFilter}
           />
         </Grid>
-        <TVList action={action} movies={displayedMovies}></TVList>
+        <TVList action={action} tvShows={displayedTVShows}></TVList>
       </Grid>
     </Grid>
   );

@@ -8,8 +8,9 @@ import HomeIcon from "@mui/icons-material/Home";
 import { useNavigate } from "react-router-dom";
 
 const TVHeader = (props) => {
-  const movie = props.movie;
+  const tvShow = props.tvShow;
   const navigate = useNavigate();
+  console.log(props);
 
   return (
     <Paper 
@@ -27,12 +28,12 @@ const TVHeader = (props) => {
       </IconButton>
 
       <Typography variant="h4" component="h3">
-        {movie.name}
-        <a href={movie.homepage}>
+        {tvShow.name}
+        <a href={tvShow.homepage}>
           <HomeIcon color="primary" />
         </a>
         <br />
-        <span sx={{ fontSize: "1.5rem" }}>{`   "${movie.tagline}"`} </span>
+        <span sx={{ fontSize: "1.5rem" }}>{`   "${tvShow.tagline}"`} </span>
       </Typography>
 
       <IconButton aria-label="go forward" onClick={() => navigate(+1) } >

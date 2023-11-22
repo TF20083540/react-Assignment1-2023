@@ -137,7 +137,7 @@ export const getMovie = (args) => {
       `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}&include_adult=false`
     ).then((response) => {
       if (!response.ok) {
-        throw new Error(response.json().message);
+        throw new Error(`error retrieving tv show details ${response.status}`);
       }
       return response.json();
     })

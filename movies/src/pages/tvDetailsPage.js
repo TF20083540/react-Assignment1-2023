@@ -8,9 +8,9 @@ import Spinner from '../components/spinner'
 // import useMovie from "../hooks/useMovie";   Redundant
 
 
-const MoviePage = (props) => {
+const TVShowPage = (props) => {
   const { id } = useParams();
-  const { data: movie, error, isLoading, isError } = useQuery(
+  const { data: tvShow, error, isLoading, isError } = useQuery(
     ["tv data", { id: id }],
     getTVShow
   );
@@ -25,17 +25,17 @@ const MoviePage = (props) => {
 
   return (
     <>
-      {movie ? (
+      {tvShow ? (
         <>
-          <PageTemplate movie={movie}>
-            <TVDetails movie={movie} />
+          <PageTemplate tvShow={tvShow}>
+            <TVDetails tvShow={tvShow} />
           </PageTemplate>
         </>
       ) : (
-        <p>Waiting for movie details</p>
+        <p>Waiting for TV Show details</p>
       )}
     </>
   );
 };
 
-export default MoviePage;
+export default TVShowPage;

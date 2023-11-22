@@ -7,10 +7,13 @@ import { getTVImages } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 
-const TemplateTVPage = ({ movie, children }) => {
+const TemplateTVPage = ({ tvShow, children }) => {
+
+  console.log("Data wanted here");
+  console.log(tvShow);
 
   const { data , error, isLoading, isError } = useQuery(
-    ["images", { id: movie.id }],
+    ["images", { id: tvShow.id }],
     getTVImages,
 
   );
@@ -27,7 +30,7 @@ const TemplateTVPage = ({ movie, children }) => {
   
   return (
     <>
-      <TVHeader movie={movie} />
+      <TVHeader tvShow={tvShow} />
 
       <Grid container spacing={5} sx={{ padding: "15px" }}>
         <Grid item xs={3}>

@@ -29,11 +29,11 @@ const root = {
 };
 const chip = { margin: 0.5 };
 
-const MovieDetails = ({ movie }) => {  // Don't miss this!
+const TVShowDetails = ({tvShow }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const {data, error, isLoading, isError } = useQuery(
-    ["cast", { id: movie.id }],
+    ["cast", { id: tvShow.id }],
     getTVCredits,
   );
   
@@ -58,7 +58,7 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
       </Typography>
 
       <Typography variant="h6" component="p">
-        {movie.overview}
+        {tvShow.overview}
       </Typography>
 
       <Paper 
@@ -69,26 +69,26 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
           <Chip label="Genres" sx={{...chip}} color="primary" />
         </li>
         
-        {movie.genres.map((g) => (
+        {tvShow.genres.map((g) => (
           <li key={g.name}>
             <Chip label={g.name} sx={{...chip}} />
           </li>
         ))}
       </Paper>
       <Paper component="ul" sx={{...root}}>
-        <Chip icon={<AccessTimeIcon />} label={`${movie.number_of_seasons} seasons.`} />
-        <Chip icon={<AccessTimeIcon />} label={`${movie.number_of_episodes} episodes.`} />
+        <Chip icon={<AccessTimeIcon />} label={`${tvShow.number_of_seasons} seasons.`} />
+        <Chip icon={<AccessTimeIcon />} label={`${tvShow.number_of_episodes} episodes.`} />
         <Chip
           icon={<StarRate />}
-          label={`${movie.vote_average} (${movie.vote_count}`}
+          label={`${tvShow.vote_average} (${tvShow.vote_count}`}
         />
-        <Chip label={`First Premiered: ${movie.first_air_date}`} />
+        <Chip label={`First Premiered: ${tvShow.first_air_date}`} />
       </Paper>
 
           {/*Countries Exercise (Week 4) */}    
       <Paper component="ul" sx={{...root}}>
       <Chip label={`Production Companies`} color='primary'/>
-        {movie.production_companies.map((g) => (
+        {tvShow.production_companies.map((g) => (
           <li key={g.name}>
             <Chip label={g.name} sx={{...chip}} />
           </li>
@@ -121,9 +121,9 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         Reviews
       </Fab>
       <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-        <MovieReviews movie={movie} />
+        <MovieReviews movie={tvShow} /> {/* Change me to tvshow*/}
       </Drawer>
       </>
   );
 };
-export default MovieDetails ;
+export default TVShowDetails ;

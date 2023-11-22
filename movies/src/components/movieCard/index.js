@@ -7,7 +7,7 @@ import CardHeader from "@mui/material/CardHeader";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import CalendarIcon from "@mui/icons-material/CalendarTodayTwoTone";
+import MovieIcon from '@mui/icons-material/Theaters';
 import StarRateIcon from "@mui/icons-material/StarRate";
 //import IconButton from "@mui/material/IconButton";
 import Grid from "@mui/material/Grid";
@@ -72,7 +72,7 @@ export default function MovieCard({movie, action}) {
         <Grid container>
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
-              <CalendarIcon fontSize="small" />
+              <MovieIcon fontSize="small" />
               {movie.release_date}
             </Typography>
           </Grid>
