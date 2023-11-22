@@ -41,9 +41,9 @@ The app has been expanded from simply being a movie-display app to also being us
 - /tv/:id - displays a selected TV Show's details.
 
 ## Material UI Icons.
--Replaced CalenderIcon in MovieCard with "Theaters" icon.
--Replaced CalenderIcon in TVCard with "Tv" icon.
--Added "Person" icon to ActorCard.
+- Replaced CalenderIcon in MovieCard with "Theaters" icon.
+- Replaced CalenderIcon in TVCard with "Tv" icon.
+- Added "Person" icon to ActorCard.
 
 
 ## Independent learning (If relevant).
