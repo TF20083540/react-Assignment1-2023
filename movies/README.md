@@ -53,15 +53,15 @@ i.e. aspects not covered in the lectures/labs. Include the source code filenames
 (we do not require code excerpts) and provide references to the online resources that helped you (articles/blogs).
 
 Resources:
-MaterialUI Icons: https://mui.com/material-ui/material-icons/
-    Used for looking up visual components to differentiate similar-looking assets.
+- MaterialUI Icons: https://mui.com/material-ui/material-icons/
+    - Used for looking up visual components to differentiate similar-looking assets.
 
-TMDB API documentation: https://developer.themoviedb.org/reference/intro/getting-started
-    Used for looking up API calls for differing data.
+- TMDB API documentation: https://developer.themoviedb.org/reference/intro/getting-started
+    - Used for looking up API calls for differing data.
 
-Stack Overflow: https://stackoverflow.com/
-    Generally used for looking up potential solutions to issues while working on the assignment. Didn't really come in handy.
+- Stack Overflow: https://stackoverflow.com/
+    - Generally used for looking up potential solutions to issues while working on the assignment. Didn't really come in handy.
 
-Postman (App version): https://web.postman.co/
+- Postman (App version): https://web.postman.co/
     Used for understanding data coming in from a TMDB-API call. VERY much came in handy!
 
