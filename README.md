@@ -45,6 +45,10 @@ The app has been expanded from simply being a movie-display app to also being us
 - Replaced CalenderIcon in TVCard with "Tv" icon.
 - Added "Person" icon to ActorCard.
 
+## Added functions:
+- Favourite TV Shows list.
+    -Also capable of deleting the show from the list.
+    -Linked to tv show details natively.
 
 ## Independent learning (If relevant).
 

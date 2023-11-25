@@ -1,21 +1,21 @@
 import React, { useContext } from "react";
-import { TVShowsContext } from "../../contexts/tvShowsContext";
+import { MoviesContext } from "../../contexts/moviesContext";
 import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-const AddToFavoritesIcon = ({ movie: tvShow }) => {
-  const context = useContext(TVShowsContext);
+const AddToTVFavoritesIcon = ({ movie: tvShow }) => {
+  const context = useContext(MoviesContext);
 
-  const handleAddToFavorites = (e) => {
+  const handleAddToTVFavorites = (e) => {
     e.preventDefault();
-    context.addToFavorites(tvShow);
+    context.addToTVFavorites(tvShow);
   };
 
   return (
-    <IconButton aria-label="add to favorites" onClick={handleAddToFavorites}>
+    <IconButton aria-label="add to favorites" onClick={handleAddToTVFavorites}>
       <FavoriteIcon color="primary" fontSize="large" />
     </IconButton>
   );
 };
 
-export default AddToFavoritesIcon;
+export default AddToTVFavoritesIcon;

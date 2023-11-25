@@ -33,6 +33,10 @@ const FavoriteMoviesPage = () => {
 
   const toDo = () => true;
 
+  console.log("Data test type Favourite Movies");
+  console.log(movies);
+  console.log("Data test end.");
+
   return (
     <PageTemplate
       title="Favorite Movies"
