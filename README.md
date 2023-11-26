@@ -1,6 +1,6 @@
 # Assignment 1 - ReactJS app.
 
-Name: [your name]
+Name: Thomas Farrell (20083540)
 
 ## Overview.
 The app has been expanded from simply being a movie-display app to also being used to display TV shows. It also shows actors related to each aswell through a standardised actorCard. 
@@ -8,7 +8,12 @@ The app has been expanded from simply being a movie-display app to also being us
 ### Features. 
 + react-query enabled on all current pages.
 + PersonIcon used on Actor Cards.
-+ [Current Task] Watch Later list, similar to favourites list.
++ Both movies and tv show details page display actor cards, showing the cast of the production.
++ Added Watch Later list to movies in the popular and all time pages.
++ Multiple end points to view popular and all time pages.
++ Added Favourite TV Show list and page with delete capability.
++ UI seems to react to reshaping, but not sure if the end result is as expected.
++ Added search function (console only).
 
 
 ## Setup requirements.
@@ -44,11 +49,6 @@ The app has been expanded from simply being a movie-display app to also being us
 - Replaced CalenderIcon in MovieCard with "Theaters" icon.
 - Replaced CalenderIcon in TVCard with "Tv" icon.
 - Added "Person" icon to ActorCard.
-
-## Added functions:
-- Favourite TV Shows list.
-    -Also capable of deleting the show from the list.
-    -Linked to tv show details natively.
 
 ## Independent learning (If relevant).
 

@@ -18,6 +18,8 @@ import DiscoverTVPage from "./pages/tvDiscoverPage";
 import TVPage from "./pages/tvDetailsPage";
 import WatchLaterMoviesPage from "./pages/watchLaterMoviesPage";
 import FavoriteTVShowsPage from "./pages/favoriteTVShowsPage";
+import SearchPage from "./pages/searchMoviesPage";
+import { Search } from "@mui/icons-material";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -50,7 +52,7 @@ const App = () => {
           <Route path="/tv/:id" element={<TVPage />} />
           <Route exact path="/movies/mustWatches" element={<WatchLaterMoviesPage />} />
           <Route exact path="/tv/favorites" element={<FavoriteTVShowsPage />} />
-
+          <Route exact path="/search" element={<SearchPage />}/>
      
         </Routes>
       </MoviesContextProvider>
