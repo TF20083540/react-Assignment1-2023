@@ -9,7 +9,7 @@ function MovieListPageTemplate({ movies, title, action }) {
   const [genreFilter, setGenreFilter] = useState("0");
   const genreId = Number(genreFilter);
 
-  console.log("templateTVListPage");
+  console.log("templaceMovieListPage");
   console.log(movies);
 
   let displayedMovies = movies

@@ -15,7 +15,7 @@ The app has been expanded from simply being a movie-display app to also being us
 + Multiple end points to view popular and all time pages.
 + Added Favourite TV Show list and page with delete capability.
 + UI seems to react to reshaping, but not sure if the end result is as expected.
-+ Added search function (console only).
++ Added search function, now with a functional page!
 
 
 ## Setup requirements.
@@ -69,5 +69,4 @@ Resources:
     - Generally used for looking up potential solutions to issues while working on the assignment. Didn't really come in handy.
 
 - Postman (App version): https://web.postman.co/
-    Used for understanding data coming in from a TMDB-API call. VERY much came in handy!
-
+    - Used for understanding data coming in from a TMDB-API call. VERY much came in handy!
