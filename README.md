@@ -8,6 +8,8 @@ The app has been expanded from simply being a movie-display app to also being us
 ### Features. 
 + react-query enabled on all current pages.
 + PersonIcon used on Actor Cards.
++ Film Rel icon now used on Movie Cards.
++ TV icon used on TV Show Cards.
 + Both movies and tv show details page display actor cards, showing the cast of the production.
 + Added Watch Later list to movies in the popular and all time pages.
 + Multiple end points to view popular and all time pages.
